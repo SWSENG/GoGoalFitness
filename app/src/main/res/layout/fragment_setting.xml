@@ -187,11 +187,23 @@
                 </androidx.cardview.widget.CardView>
             </GridLayout>
 
+            <Space
+                android:id="@+id/spacer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/SignOutText"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="JOIN US IN SOCIAL MEDIA"
+                android:gravity="center"
+                android:textSize="20dp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="75dp"
+                android:padding="60dp"
                 android:orientation="horizontal"
                 android:paddingTop="100dp">
 
