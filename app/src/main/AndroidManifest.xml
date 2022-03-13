@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGoalFitness">
         <activity
+            android:name=".UpperBodyActivity"
+            android:exported="false" />
+        <activity
             android:name=".DestinationActivity"
             android:exported="false" />
         <activity
@@ -38,7 +41,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".AlarmReceiver"/>
+
+        <receiver android:name=".AlarmReceiver" />
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler().postDelayed({
-            startActivity(Intent(this, ReminderActivity::class.java))
+            startActivity(Intent(this, NavigationActivity::class.java))
             finish()
         }, SPLASHTIME)
     }

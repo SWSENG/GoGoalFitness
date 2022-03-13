@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpperBodyActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/upperPage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/upperbody"
+        android:tint="#6F000000"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/UpperBodyTitletext"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="205dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="20dp"
+            android:text="UPPER BODY"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+
+        <ImageButton
+            android:id="@+id/btnBackAboutUs"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/black"
+            app:srcCompat="@drawable/abc_vector_test" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview"
+            tools:listitem="@layout/acticity_upper_body_list"/>
+
+    </ScrollView>
+
+</LinearLayout>

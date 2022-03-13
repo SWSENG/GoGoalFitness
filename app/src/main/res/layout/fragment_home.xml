@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,13 +12,23 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:background="@drawable/dashboard_bg"
                 android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/WorkoutText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingTop="30dp"
+                    android:text="WORKOUT"
+                    android:textColor="@color/splashScreenYellow"
+                    android:textSize="50sp" />
             </RelativeLayout>
 
             <GridLayout
@@ -27,6 +38,127 @@
                 android:columnCount="1"
                 android:columnOrderPreserved="false"
                 android:rowCount="4">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/upperbody"
+                        android:alpha="0.8"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="50dp">
+
+                        <TextView
+                            android:id="@+id/UpperBodyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="Upper Body"
+                            android:textColor="@color/white"
+                            android:textSize="40sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/lowerbody"
+                        android:alpha="1"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="50dp">
+
+                        <TextView
+                            android:id="@+id/LowerBodyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="Lower Body"
+                            android:textColor="@color/white"
+                            android:textSize="40sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/chest"
+                        android:alpha="0.8"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="50dp">
+
+                        <TextView
+                            android:id="@+id/ChestText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="Chest"
+                            android:textColor="@color/white"
+                            android:textSize="40sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/arm"
+                        android:alpha="1"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="50dp">
+
+                        <TextView
+                            android:id="@+id/ArmText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="Arm"
+                            android:textColor="@color/white"
+                            android:textSize="40sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
 
             </GridLayout>
         </LinearLayout>
