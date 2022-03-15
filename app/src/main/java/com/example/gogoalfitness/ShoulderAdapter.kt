@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 
-class UpperBodyAdapter(private val context:Activity, private val arrayList: Array<UpperBodyList>):ArrayAdapter<UpperBodyList>
+class ShoulderAdapter(private val context:Activity, private val arrayList: ArrayList<ShoulderList>):ArrayAdapter<ShoulderList>
     (context, R.layout.acticity_upper_body_list, arrayList){
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {

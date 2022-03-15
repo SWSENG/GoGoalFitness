@@ -15,7 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGoalFitness">
         <activity
-            android:name=".UpperBodyActivity"
+            android:name=".ShoulderExerciseDescActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShoulderActivity"
             android:exported="false" />
         <activity
             android:name=".DestinationActivity"

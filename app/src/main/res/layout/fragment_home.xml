@@ -58,11 +58,11 @@
                         android:padding="50dp">
 
                         <TextView
-                            android:id="@+id/UpperBodyText"
+                            android:id="@+id/ShoulderText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="start"
-                            android:text="Upper Body"
+                            android:text="Shoulder"
                             android:textColor="@color/white"
                             android:textSize="40sp" />
 
@@ -88,11 +88,11 @@
                         android:padding="50dp">
 
                         <TextView
-                            android:id="@+id/LowerBodyText"
+                            android:id="@+id/LegText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="start"
-                            android:text="Lower Body"
+                            android:text="Leg"
                             android:textColor="@color/white"
                             android:textSize="40sp" />
 

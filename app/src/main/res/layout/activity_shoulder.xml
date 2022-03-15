@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpperBodyActivity"
+    tools:context=".ShoulderActivity"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -16,7 +16,7 @@
         android:paddingBottom="20dp">
 
         <TextView
-            android:id="@+id/UpperBodyTitletext"
+            android:id="@+id/ShoulderTitletext"
             android:layout_width="match_parent"
             android:layout_height="71dp"
             android:layout_alignParentEnd="true"
@@ -25,9 +25,9 @@
             android:layout_marginBottom="0dp"
             android:gravity="center_horizontal"
             android:paddingTop="20dp"
-            android:text="UPPER BODY"
+            android:text="SHOULDER"
             android:textColor="@color/white"
-            android:textSize="30sp"/>
+            android:textSize="30sp" />
 
         <ImageButton
             android:id="@+id/btnBackAboutUs"
