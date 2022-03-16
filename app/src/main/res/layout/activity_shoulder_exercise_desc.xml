@@ -11,11 +11,15 @@
         android:layout_width="350dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        />
+        android:layout_marginTop="50dp" />
 
     <TextView
+        android:id="@+id/ShoulderWorkoutTextDesc"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:layout_below="@id/videoView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
 
 </RelativeLayout>

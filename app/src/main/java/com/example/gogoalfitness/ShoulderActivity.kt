@@ -13,10 +13,15 @@ class ShoulderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_shoulder)
+        binding = ActivityShoulderBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val imageId = intArrayOf(
-
+            R.drawable.aboutus,
+            R.drawable.aboutus,
+            R.drawable.aboutus,
+            R.drawable.aboutus,
+            R.drawable.aboutus
         )
 
         val title = arrayOf(
@@ -35,11 +40,28 @@ class ShoulderActivity : AppCompatActivity() {
             "00:30"
         )
 
+        val gifId = intArrayOf(
+            R.drawable.armraises,
+            R.drawable.armraises,
+            R.drawable.armraises,
+            R.drawable.armraises,
+            R.drawable.armraises
+        )
+
+        val desc = arrayOf(
+            "Arm Raises",
+            "RhomBoid Pulls",
+            "Side Arm Raise",
+            "Knee Push-Ups",
+            "Arm Scissors"
+        )
+
+
         shoulderArrayList = ArrayList()
 
         for(i in title.indices)
         {
-            val shoulderWorkout = ShoulderList(title[i], subTitle[i], imageId[i])
+            val shoulderWorkout = ShoulderList(title[i], subTitle[i], imageId[i], gifId[i], desc[i])
             shoulderArrayList.add(shoulderWorkout)
         }
 
@@ -50,11 +72,15 @@ class ShoulderActivity : AppCompatActivity() {
             val title = title[position]
             val subTitle = subTitle[position]
             val imageId = imageId[position]
+            val gifId = gifId[position]
+            val desc = desc[position]
 
-            val i = Intent(this, HomeFragment::class.java)
+            val i = Intent(this, ShoulderExerciseDescActivity::class.java)
             i.putExtra("title", title)
             i.putExtra("subTitle", subTitle)
             i.putExtra("imageId", imageId)
+            i.putExtra("gifId", gifId)
+            i.putExtra("desc", desc)
 
             startActivity(i)
         }
