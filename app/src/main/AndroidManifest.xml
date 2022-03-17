@@ -15,11 +15,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGoalFitness">
         <activity
-            android:name=".ShoulderExerciseDescActivity"
+            android:name=".LegExerciseDescActivity"
             android:exported="false" />
         <activity
+            android:name=".LegActivity"
+            android:exported="false"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".ShoulderExerciseDescActivity"
+            android:exported="false"
+            android:parentActivityName=".ShoulderActivity" />
+        <activity
             android:name=".ShoulderActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".NavigationActivity" />
         <activity
             android:name=".DestinationActivity"
             android:exported="false" />
