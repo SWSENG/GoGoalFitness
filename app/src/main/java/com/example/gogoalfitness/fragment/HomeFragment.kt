@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.gogoalfitness.ChestActivity
 import com.example.gogoalfitness.LegActivity
 import com.example.gogoalfitness.ShoulderActivity
 import com.example.gogoalfitness.databinding.FragmentHomeBinding
@@ -28,6 +29,11 @@ class HomeFragment : Fragment() {
 
         bind.cardLeg.setOnClickListener {
             val intent = Intent(this@HomeFragment.requireContext(), LegActivity::class.java)
+            startActivity(intent)
+        }
+
+        bind.cardChest.setOnClickListener {
+            val intent = Intent(this@HomeFragment.requireContext(), ChestActivity::class.java)
             startActivity(intent)
         }
 

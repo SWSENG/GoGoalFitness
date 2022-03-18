@@ -78,9 +78,9 @@ class LegActivity : AppCompatActivity() {
             legArrayList.add(legWorkout)
         }
 
-        binding.listview.isClickable = true
-        binding.listview.adapter = LegAdapter(this, legArrayList)
-        binding.listview.setOnItemClickListener{parent, view, position, id ->
+        binding.Leglistview.isClickable = true
+        binding.Leglistview.adapter = LegAdapter(this, legArrayList)
+        binding.Leglistview.setOnItemClickListener{parent, view, position, id ->
 
             val title = title[position]
             val subTitle = subTitle[position]
