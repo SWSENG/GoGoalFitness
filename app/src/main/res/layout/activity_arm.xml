@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArmActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ArmPage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/arm"
+        android:tint="#6F000000"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/ArmTitletext"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="205dp"
+            android:layout_marginBottom="0dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:text="LEG"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Armlistview"
+        tools:listitem="@layout/activity_leg_list"/>
+
+</LinearLayout>

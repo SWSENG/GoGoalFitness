@@ -15,17 +15,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGoalFitness">
         <activity
-            android:name=".ChestExerciseDescActivity"
+            android:name=".ArmExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".ChestActivity"/>
+            android:parentActivityName=".ArmActivity"/>
         <activity
-            android:name=".ChestActivity"
+            android:name=".ArmActivity"
             android:exported="false"
             android:parentActivityName=".NavigationActivity"/>
         <activity
+            android:name=".ChestExerciseDescActivity"
+            android:exported="false"
+            android:parentActivityName=".ChestActivity" />
+        <activity
+            android:name=".ChestActivity"
+            android:exported="false"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
             android:name=".LegExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".LegActivity"/>
+            android:parentActivityName=".LegActivity" />
         <activity
             android:name=".LegActivity"
             android:exported="false"
