@@ -40,6 +40,12 @@
                     android:text="SaiSeng"
                     android:textColor="@color/splashScreenYellow"
                     android:textSize="30dp" />
+
+                <ImageButton
+                    android:id="@+id/editBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
             </RelativeLayout>
 
             <GridLayout
@@ -51,6 +57,7 @@
                 android:rowCount="4">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/reminderCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
@@ -85,6 +92,8 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+
+                    android:id="@+id/RateUsCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
@@ -101,17 +110,17 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:id="@+id/ImgAboutUs"
+                            android:id="@+id/ImgRateUs"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:background="@drawable/aboutus" />
+                            android:background="@drawable/rateus" />
 
                         <TextView
-                            android:id="@+id/AboutUsText"
+                            android:id="@+id/RateUsText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="ABOUT US"
+                            android:text="RATE US"
                             android:textSize="23dp" />
 
                     </LinearLayout>
@@ -119,6 +128,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/FeedbackCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
@@ -135,17 +145,17 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:id="@+id/ImgContactUs"
+                            android:id="@+id/ImgFeedback"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:background="@drawable/contactus" />
+                            android:background="@drawable/feedback" />
 
                         <TextView
-                            android:id="@+id/ContactUsText"
+                            android:id="@+id/FeedbackText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="CONTACT US"
+                            android:text="FEEDBACK"
                             android:textSize="23dp" />
 
                     </LinearLayout>
@@ -153,6 +163,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/SignOutCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
@@ -185,13 +196,9 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
             </GridLayout>
 
-            <Space
-                android:id="@+id/spacer"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@id/SignOutText"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -203,29 +210,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="60dp"
                 android:orientation="horizontal"
+                android:padding="60dp"
                 android:paddingTop="100dp">
 
                 <ImageView
                     android:id="@+id/FacebookLink"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:background="@drawable/facebook"/>
+                    android:background="@drawable/facebook" />
 
                 <ImageView
                     android:id="@+id/InstaLink"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:background="@drawable/insta"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/insta" />
 
                 <ImageView
                     android:id="@+id/TwitterLink"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:background="@drawable/twitter"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/twitter" />
             </LinearLayout>
 
         </LinearLayout>

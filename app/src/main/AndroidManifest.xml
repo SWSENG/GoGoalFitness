@@ -51,10 +51,8 @@
             android:exported="false" />
         <activity
             android:name=".ReminderActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AboutUsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".NavigationActivity"/>
         <activity
             android:name=".NavigationActivity"
             android:exported="false"
