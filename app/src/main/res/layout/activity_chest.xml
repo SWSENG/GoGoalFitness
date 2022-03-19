@@ -1,40 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChestActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ChestActivity">
 
-    <RelativeLayout
-        android:id="@+id/ChestPage"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/chest"
-        android:tint="#6F000000"
-        android:paddingBottom="20dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/ChestTitletext"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="205dp"
-            android:layout_marginBottom="0dp"
-            android:paddingLeft="30dp"
-            android:paddingTop="20dp"
-            android:text="LEG"
-            android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/ChestPage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/chest"
+                android:paddingBottom="20dp"
+                android:tint="#6F000000">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/Chestlistview"
-        tools:listitem="@layout/activity_leg_list"/>
+                <TextView
+                    android:id="@+id/ChestTitletext"
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="205dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="20dp"
+                    android:text="CHEST"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
 
-</LinearLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/Chestlistview"
+                android:layout_width="match_parent"
+                android:layout_height="580dp"
+                tools:listitem="@layout/activity_leg_list" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/chestStartBtn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="START"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:background="@color/dashboardRed"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

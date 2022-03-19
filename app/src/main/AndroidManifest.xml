@@ -15,44 +15,58 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGoalFitness">
         <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"
+            android:label="Profile"
+            android:parentActivityName=".NavigationActivity"/>
+        <activity
             android:name=".ArmExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".ArmActivity"/>
+            android:parentActivityName=".ArmActivity"
+            android:label="Workout"/>
         <activity
             android:name=".ArmActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity"/>
+            android:parentActivityName=".NavigationActivity"
+            android:label="Workout"/>
         <activity
             android:name=".ChestExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".ChestActivity" />
+            android:parentActivityName=".ChestActivity"
+            android:label="Workout"/>
         <activity
             android:name=".ChestActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity" />
+            android:parentActivityName=".NavigationActivity"
+            android:label="Workout"/>
         <activity
             android:name=".LegExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".LegActivity" />
+            android:parentActivityName=".LegActivity"
+            android:label="Workout"/>
         <activity
             android:name=".LegActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity" />
+            android:parentActivityName=".NavigationActivity"
+            android:label="Workout"/>
         <activity
             android:name=".ShoulderExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".ShoulderActivity" />
+            android:parentActivityName=".ShoulderActivity"
+            android:label="Workout"/>
         <activity
             android:name=".ShoulderActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity" />
+            android:parentActivityName=".NavigationActivity"
+            android:label="Workout"/>
         <activity
             android:name=".DestinationActivity"
             android:exported="false" />
         <activity
             android:name=".ReminderActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity"/>
+            android:parentActivityName=".NavigationActivity"
+            android:label="Reminder"/>
         <activity
             android:name=".NavigationActivity"
             android:exported="false"

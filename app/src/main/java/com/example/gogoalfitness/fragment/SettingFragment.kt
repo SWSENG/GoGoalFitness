@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.gogoalfitness.EditProfileActivity
 import com.example.gogoalfitness.ReminderActivity
+import com.example.gogoalfitness.SplashActivity
 import com.example.gogoalfitness.databinding.FragmentSettingBinding
 
 
@@ -53,6 +55,17 @@ class SettingFragment : Fragment() {
             val uri = Uri.parse("mailto:gogoalFitness@gmail.com")
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
+        }
+
+        bind.SignOutCard.setOnClickListener {
+            val intent = Intent(this@SettingFragment.requireContext(), SplashActivity::class.java)
+            startActivity(intent)
+        }
+
+        bind.editBtn.setOnClickListener {
+            val intent = Intent(this@SettingFragment.requireContext(), EditProfileActivity::class.java)
+            startActivity(intent)
+
         }
 
         return bind.root

@@ -17,7 +17,7 @@
         android:textColor="@color/black"
         android:textSize="46dp"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSelectTime"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -27,7 +27,7 @@
         android:textSize="26dp"
         android:background="@color/splashScreenYellow"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSetAlarm"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -37,7 +37,7 @@
         android:textSize="26dp"
         android:background="@color/splashScreenYellow"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCancelAlarm"
         android:layout_width="match_parent"
         android:layout_height="70dp"

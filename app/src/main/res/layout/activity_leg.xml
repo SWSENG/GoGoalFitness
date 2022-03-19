@@ -4,38 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LegActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".LegActivity">
 
-    <RelativeLayout
-        android:id="@+id/LegPage"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/lowerbody"
-        android:tint="#6F000000"
-        android:paddingBottom="20dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/LegTitletext"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="205dp"
-            android:layout_marginBottom="0dp"
-            android:paddingLeft="30dp"
-            android:paddingTop="20dp"
-            android:text="LEG"
-            android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/LegPage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/lowerbody"
+                android:paddingBottom="20dp"
+                android:tint="#6F000000">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/Leglistview"
-        tools:listitem="@layout/activity_leg_list"/>
+                <TextView
+                    android:id="@+id/LegTitletext"
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="205dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="20dp"
+                    android:text="LEG"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
 
+            </RelativeLayout>
 
+            <ListView
+                android:id="@+id/Leglistview"
+                android:layout_width="match_parent"
+                android:layout_height="580dp"
+                tools:listitem="@layout/activity_leg_list" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/legStartBtn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/dashboardRed"
+                android:text="START"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

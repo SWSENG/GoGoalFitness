@@ -41,17 +41,20 @@
                     android:textColor="@color/splashScreenYellow"
                     android:textSize="30dp" />
 
-                <ImageButton
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/editBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/editprofileicon"/>
             </RelativeLayout>
 
             <GridLayout
-                android:layout_width="match_parent"
+                android:paddingTop="30dp"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:alignmentMode="alignMargins"
+                android:layout_gravity="center"
                 android:columnCount="1"
                 android:columnOrderPreserved="false"
                 android:rowCount="4">
@@ -200,6 +203,7 @@
             </GridLayout>
 
             <TextView
+                android:paddingTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="JOIN US IN SOCIAL MEDIA"
@@ -211,7 +215,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="60dp"
+                android:padding="30dp"
                 android:paddingTop="100dp">
 
                 <ImageView
