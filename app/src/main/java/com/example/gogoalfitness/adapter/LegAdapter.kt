@@ -12,16 +12,16 @@ import com.example.gogoalfitness.list.LegList
 
 class LegAdapter(private val context: Activity, private val arrayList: ArrayList<LegList>):
     ArrayAdapter<LegList>
-    (context, R.layout.activity_leg_list, arrayList) {
+    (context, R.layout.activity_workout_list, arrayList) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         val inflater: LayoutInflater = LayoutInflater.from(context)
-        val view: View = inflater.inflate(R.layout.activity_leg_list, null)
+        val view: View = inflater.inflate(R.layout.activity_workout_list, null)
 
-        val legImageView: ImageView = view.findViewById(R.id.LegListPic)
-        val legTitle: TextView = view.findViewById(R.id.LegListText)
-        val legSubTitle: TextView = view.findViewById(R.id.timeOverLegList)
+        val legImageView: ImageView = view.findViewById(R.id.listWorkoutPic)
+        val legTitle: TextView = view.findViewById(R.id.listWorkoutText)
+        val legSubTitle: TextView = view.findViewById(R.id.timeOverListWorkout)
 
         legImageView.setImageResource(arrayList[position].imageId)
         legTitle.text = arrayList[position].title

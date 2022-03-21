@@ -44,7 +44,7 @@
                 android:id="@+id/Chestlistview"
                 android:layout_width="match_parent"
                 android:layout_height="580dp"
-                tools:listitem="@layout/activity_leg_list" />
+                tools:listitem="@layout/activity_workout_list" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/chestStartBtn"

@@ -17,6 +17,11 @@ class ShoulderActivity : AppCompatActivity() {
         binding = ActivityShoulderBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.shoulderStartBtn.setOnClickListener{
+            val intent = Intent(this, StartShoulderWorkout::class.java)
+            startActivity(intent)
+        }
+
         val imageId = intArrayOf(
             R.drawable.armraises,
             R.drawable.bearwalk,
@@ -34,9 +39,9 @@ class ShoulderActivity : AppCompatActivity() {
         )
 
         val subTitle = arrayOf(
-            "00:16",
-            "00:16",
-            "00:16",
+            "00:30",
+            "00:30",
+            "00:30",
             "00:30",
             "00:30"
         )

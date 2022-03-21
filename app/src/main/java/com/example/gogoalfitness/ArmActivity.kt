@@ -17,6 +17,11 @@ class ArmActivity : AppCompatActivity() {
         binding = ActivityArmBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.armStartBtn.setOnClickListener{
+            val intent = Intent(this, StartArmWorkout::class.java)
+            startActivity(intent)
+        }
+
         val imageId = intArrayOf(
             R.drawable.bandreverseplank,
             R.drawable.bicepsstretch,

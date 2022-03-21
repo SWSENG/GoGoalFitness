@@ -10,4 +10,5 @@
     <color name="splashScreenYellow">#FFEC8B</color>
     <color name="btnColorOrange">#FBAF53</color>
     <color name="dashboardRed">#FD7869</color>
+    <color name="gray">#A19F9E</color>
 </resources>

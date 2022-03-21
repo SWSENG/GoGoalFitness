@@ -9,8 +9,11 @@
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/circular_progress_bar.xml" value="0.188" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/circular_progress_gray.xml" value="0.188" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/dashboard_bg.xml" value="0.2275" />
+        <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/ic_done.xml" value="0.188" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/ic_home.xml" value="0.197" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/ic_stop.xml" value="0.188" />
+        <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/item_circular_color_gray_bg.xml" value="0.188" />
+        <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/item_circular_thin_color_border.xml" value="0.188" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/profile_circle.xml" value="0.2275" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/drawable/shadow.xml" value="0.2275" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout-v21/fragment_home.xml" value="0.2210144927536232" />
@@ -24,6 +27,7 @@
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_chest_list.xml" value="0.2210144927536232" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_destination.xml" value="0.2210144927536232" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_edit_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_finish.xml" value="0.22826086956521738" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_leg.xml" value="0.2210144927536232" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_leg_exercise_desc.xml" value="0.2210144927536232" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_leg_list.xml" value="0.2210144927536232" />
@@ -35,12 +39,17 @@
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_shoulder_excercis_desc.xml" value="0.2210144927536232" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_shoulder_exercise_desc.xml" value="0.2210144927536232" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_splash.xml" value="0.264" />
+        <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_start_arm_workout.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_start_chest_workout.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_start_leg_workout.xml" value="0.22826086956521738" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_start_shoulder_workout.xml" value="0.2" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_upper_body.xml" value="0.264" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/activity_workout.xml" value="0.2210144927536232" />
+        <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/dialog_custom_back_confirmation.xml" value="0.22826086956521738" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/fragment_home.xml" value="0.2210144927536232" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/fragment_setting.xml" value="0.2" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/fragment_statistic.xml" value="0.2210144927536232" />
+        <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/layout/item_exercise_status.xml" value="0.22826086956521738" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/menu/activity_main_drawer.xml" value="0.27447916666666666" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/menu/btm_menu.xml" value="0.27447916666666666" />
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/menu/menu.xml" value="0.27447916666666666" />

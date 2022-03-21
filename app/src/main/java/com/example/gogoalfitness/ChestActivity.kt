@@ -17,6 +17,11 @@ class ChestActivity : AppCompatActivity() {
         binding = ActivityChestBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.chestStartBtn.setOnClickListener{
+            val intent = Intent(this, StartChestWorkout::class.java)
+            startActivity(intent)
+        }
+
         val imageId = intArrayOf(
             R.drawable.ankletappushups,
             R.drawable.asymmetricalpushup,

@@ -17,6 +17,11 @@ class LegActivity : AppCompatActivity() {
         binding = ActivityLegBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.legStartBtn.setOnClickListener{
+            val intent = Intent(this, StartLegWorkout::class.java)
+            startActivity(intent)
+        }
+
         val imageId = intArrayOf(
             R.drawable.jumpsquat,
             R.drawable.butterflystretch,

@@ -8,18 +8,10 @@
     tools:context=".StartShoulderWorkout"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_exercise_activity"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/dashboardRed"
-        app:titleTextColor="@color/white" />
-
     <!-- REST LinearLayout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar_exercise_activity"
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="gone"
@@ -93,10 +85,10 @@
 
     <!-- Exercise LinearLayout -->
     <LinearLayout
-        android:id="@+id/exercise_view_ll"
+        android:id="@+id/shoulder_view_ll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar_exercise_activity"
+        android:layout_below="@+id/toolbar_shoulder_activity"
         android:orientation="vertical"
         android:visibility="visible">
 
@@ -109,7 +101,7 @@
             android:src="@drawable/armraises" />
 
         <TextView
-            android:id="@+id/exercise_name_tv"
+            android:id="@+id/shoulder_name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -127,7 +119,7 @@
             android:background="@drawable/circular_color_border">
 
             <ProgressBar
-                android:id="@+id/exercise_progressBar"
+                android:id="@+id/shoulder_progressBar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -147,7 +139,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/exercise_timer_tv"
+                    android:id="@+id/shoulder_timer_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -160,7 +152,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/exercise_status_rv"
+        android:id="@+id/shoulder_status_rv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

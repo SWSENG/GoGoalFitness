@@ -7,15 +7,13 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.gogoalfitness.adapter.ShoulderStatusAdapter
-import com.example.gogoalfitness.exercise.Shoulder
-import com.example.gogoalfitness.list.ShoulderModel
+import com.example.gogoalfitness.adapter.ArmStatusAdapter
+import com.example.gogoalfitness.exercise.Arm
+import com.example.gogoalfitness.list.ArmModel
 import kotlinx.android.synthetic.main.activity_start_workout.*
 import kotlinx.android.synthetic.main.dialog_custom_back_confirmation.*
-import kotlin.collections.ArrayList
 
-
-class StartShoulderWorkout : AppCompatActivity() {
+class StartArmWorkout : AppCompatActivity() {
 
     private var restTimer : CountDownTimer? = null
     private var restProgress = 0
@@ -25,10 +23,10 @@ class StartShoulderWorkout : AppCompatActivity() {
     private var exerciseProgress = 0
     private var exerciseTime : Long = 30
 
-    private var shoulderList : ArrayList<ShoulderModel>? = null
+    private var armList : ArrayList<ArmModel>? = null
     private var currentExercisePosition = -1
 
-    private var shoulderAdapter : ShoulderStatusAdapter? = null
+    private var armAdapter : ArmStatusAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +39,7 @@ class StartShoulderWorkout : AppCompatActivity() {
 
         }
 
-        shoulderList = Shoulder.defaultExerciseList()
+        armList = Arm.defaultExerciseList()
         setupRestView()
 
         setupExerciseStatusRecyclerView()
@@ -61,8 +59,8 @@ class StartShoulderWorkout : AppCompatActivity() {
 
             override fun onFinish() {
                 currentExercisePosition++
-                shoulderList!![currentExercisePosition].setIsSelected(true)
-                shoulderAdapter!!.notifyDataSetChanged() //update the adapter about change the data
+                armList!![currentExercisePosition].setIsSelected(true)
+                armAdapter!!.notifyDataSetChanged() //update the adapter about change the data
                 setupExerciseView()
             }
         }.start()
@@ -78,7 +76,7 @@ class StartShoulderWorkout : AppCompatActivity() {
             restProgress = 0
         }
 
-        next_exercise_tv.text = shoulderList!![currentExercisePosition + 1].getName()
+        next_exercise_tv.text = armList!![currentExercisePosition + 1].getName()
         setRestProgressBar()
     }
 
@@ -94,14 +92,14 @@ class StartShoulderWorkout : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                if(currentExercisePosition < shoulderList?.size!! - 1){
-                    shoulderList!![currentExercisePosition].setIsSelected(false)
-                    shoulderList!![currentExercisePosition].setIsCompleted(true)
-                    shoulderAdapter!!.notifyDataSetChanged() //update the adapter about change the data
+                if(currentExercisePosition < armList?.size!! - 1){
+                    armList!![currentExercisePosition].setIsSelected(false)
+                    armList!![currentExercisePosition].setIsCompleted(true)
+                    armAdapter!!.notifyDataSetChanged() //update the adapter about change the data
                     setupRestView()
                 }else{
                     finish()
-                    val intent = Intent(this@StartShoulderWorkout, FinishActivity::class.java)
+                    val intent = Intent(this@StartArmWorkout, FinishActivity::class.java)
                     startActivity(intent)
                 }
             }
@@ -121,8 +119,8 @@ class StartShoulderWorkout : AppCompatActivity() {
 
 
         // setting exercise values
-        image_iv.setImageResource(shoulderList!![currentExercisePosition].getImage())
-        shoulder_name_tv.text = shoulderList!![currentExercisePosition].getName()
+        image_iv.setImageResource(armList!![currentExercisePosition].getImage())
+        shoulder_name_tv.text = armList!![currentExercisePosition].getName()
     }
 
 
@@ -131,8 +129,8 @@ class StartShoulderWorkout : AppCompatActivity() {
         shoulder_status_rv.layoutManager = LinearLayoutManager(this,
             LinearLayoutManager.HORIZONTAL, false)
 
-        shoulderAdapter = ShoulderStatusAdapter(shoulderList!!,this)
-        shoulder_status_rv.adapter = shoulderAdapter
+        armAdapter = ArmStatusAdapter(armList!!,this)
+        shoulder_status_rv.adapter = armAdapter
     }
 
     override fun onDestroy() {
@@ -169,5 +167,4 @@ class StartShoulderWorkout : AppCompatActivity() {
 
         customDialog.show()
     }
-
 }

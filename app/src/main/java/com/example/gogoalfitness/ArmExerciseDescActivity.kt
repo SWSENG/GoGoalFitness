@@ -2,20 +2,20 @@ package com.example.gogoalfitness
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.gogoalfitness.databinding.ActivityArmExerciseDescBinding
+import com.example.gogoalfitness.databinding.ActivityExerciseDescBinding
 
 class ArmExerciseDescActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityArmExerciseDescBinding
+    private lateinit var binding: ActivityExerciseDescBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityArmExerciseDescBinding.inflate(layoutInflater)
+        binding = ActivityExerciseDescBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val tutorial = intent.getIntExtra("gifId", R.drawable.armraises)
         val desc = intent.getStringExtra("desc")
 
-        binding.armVideoView.setImageResource(tutorial)
-        binding.armWorkoutTextDesc.text = desc
+        binding.videoView.setImageResource(tutorial)
+        binding.workoutTextDesc.text = desc
     }
 }

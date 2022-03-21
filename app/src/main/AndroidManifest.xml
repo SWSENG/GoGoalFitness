@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gogoalfitness" >
+    package="com.example.gogoalfitness">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,7 +13,19 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GoGoalFitness" >
+        android:theme="@style/Theme.GoGoalFitness">
+        <activity
+            android:name=".StartArmWorkout"
+            android:exported="false" />
+        <activity
+            android:name=".StartChestWorkout"
+            android:exported="false" />
+        <activity
+            android:name=".StartLegWorkout"
+            android:exported="false" />
+        <activity
+            android:name=".FinishActivity"
+            android:exported="false" />
         <activity
             android:name=".StartShoulderWorkout"
             android:exported="false" />
@@ -78,7 +90,7 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
