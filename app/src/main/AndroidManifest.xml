@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gogoalfitness">
+    package="com.example.gogoalfitness" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,60 +13,63 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GoGoalFitness">
+        android:theme="@style/Theme.GoGoalFitness" >
+        <activity
+            android:name=".StartShoulderWorkout"
+            android:exported="false" />
         <activity
             android:name=".EditProfileActivity"
             android:exported="false"
             android:label="Profile"
-            android:parentActivityName=".NavigationActivity"/>
+            android:parentActivityName=".NavigationActivity" />
         <activity
             android:name=".ArmExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".ArmActivity"
-            android:label="Workout"/>
+            android:label="Workout"
+            android:parentActivityName=".ArmActivity" />
         <activity
             android:name=".ArmActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity"
-            android:label="Workout"/>
+            android:label="Workout"
+            android:parentActivityName=".NavigationActivity" />
         <activity
             android:name=".ChestExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".ChestActivity"
-            android:label="Workout"/>
+            android:label="Workout"
+            android:parentActivityName=".ChestActivity" />
         <activity
             android:name=".ChestActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity"
-            android:label="Workout"/>
+            android:label="Workout"
+            android:parentActivityName=".NavigationActivity" />
         <activity
             android:name=".LegExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".LegActivity"
-            android:label="Workout"/>
+            android:label="Workout"
+            android:parentActivityName=".LegActivity" />
         <activity
             android:name=".LegActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity"
-            android:label="Workout"/>
+            android:label="Workout"
+            android:parentActivityName=".NavigationActivity" />
         <activity
             android:name=".ShoulderExerciseDescActivity"
             android:exported="false"
-            android:parentActivityName=".ShoulderActivity"
-            android:label="Workout"/>
+            android:label="Workout"
+            android:parentActivityName=".ShoulderActivity" />
         <activity
             android:name=".ShoulderActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity"
-            android:label="Workout"/>
+            android:label="Workout"
+            android:parentActivityName=".NavigationActivity" />
         <activity
             android:name=".DestinationActivity"
             android:exported="false" />
         <activity
             android:name=".ReminderActivity"
             android:exported="false"
-            android:parentActivityName=".NavigationActivity"
-            android:label="Reminder"/>
+            android:label="Reminder"
+            android:parentActivityName=".NavigationActivity" />
         <activity
             android:name=".NavigationActivity"
             android:exported="false"
@@ -75,7 +78,7 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

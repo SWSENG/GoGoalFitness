@@ -3,7 +3,9 @@ package com.example.gogoalfitness
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.gogoalfitness.adapter.ArmAdapter
 import com.example.gogoalfitness.databinding.ActivityArmBinding
+import com.example.gogoalfitness.list.ArmList
 
 class ArmActivity : AppCompatActivity() {
 

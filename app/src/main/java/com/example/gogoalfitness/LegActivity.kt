@@ -3,8 +3,9 @@ package com.example.gogoalfitness
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.gogoalfitness.adapter.LegAdapter
 import com.example.gogoalfitness.databinding.ActivityLegBinding
-import com.example.gogoalfitness.databinding.ActivityShoulderBinding
+import com.example.gogoalfitness.list.LegList
 
 class LegActivity : AppCompatActivity() {
 

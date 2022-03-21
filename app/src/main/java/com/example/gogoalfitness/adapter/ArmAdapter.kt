@@ -1,4 +1,4 @@
-package com.example.gogoalfitness
+package com.example.gogoalfitness.adapter
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.gogoalfitness.R
+import com.example.gogoalfitness.list.ArmList
 
 class ArmAdapter (private val context: Activity, private val arrayList: ArrayList<ArmList>):
     ArrayAdapter<ArmList>

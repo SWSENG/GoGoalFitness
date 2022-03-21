@@ -3,8 +3,9 @@ package com.example.gogoalfitness
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.gogoalfitness.adapter.ShoulderAdapter
 import com.example.gogoalfitness.databinding.ActivityShoulderBinding
-import com.example.gogoalfitness.fragment.HomeFragment
+import com.example.gogoalfitness.list.ShoulderList
 
 class ShoulderActivity : AppCompatActivity() {
 
