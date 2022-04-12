@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.gogoalfitness.R
+import com.example.gogoalfitness.databinding.ActivitySignupBinding
 import java.util.*
 
 class SignupActivity : AppCompatActivity() {

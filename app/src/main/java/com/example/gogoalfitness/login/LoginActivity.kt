@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.gogoalfitness.R
 import com.example.gogoalfitness.databinding.ActivityLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
