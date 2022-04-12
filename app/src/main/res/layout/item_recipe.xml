@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="175dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/wholeRecipe"
+    android:layout_height="215dp"
+    android:layout_margin="5dp"
+    android:background="#FFBFBF">
+
+    <ImageView
+        android:id="@+id/recipeThumbnail"
+        android:layout_width="175dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/recipeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recipeThumbnail"
+        android:layout_marginHorizontal="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Easy Apple Cinnamon Waffles"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/recipeCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="307"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/textCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/recipeCalories"
+        android:text="Cal"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <ImageButton
+        android:id="@+id/btnBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/iconbookmark"
+        android:background="@android:color/transparent"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

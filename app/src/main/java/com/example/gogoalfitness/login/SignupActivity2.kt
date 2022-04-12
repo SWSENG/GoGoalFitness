@@ -6,12 +6,14 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.gogoalfitness.databinding.ActivitySignup2Binding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignupActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivitySignup2Binding
 
     private lateinit var auth: FirebaseAuth
-    //private lateinit var database: DatabaseReference
+    private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +23,7 @@ class SignupActivity2 : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         //if no exist in database auto create for us
-        //database = FirebaseDatabase.getInstance().getReference("UserInfo")
+        database = FirebaseDatabase.getInstance().getReference("UserInfo")
 
         binding.btnSignUpSignUp.setOnClickListener(){
             val email : String = binding.editTextEmailAddressSignUp.text.toString()
@@ -68,7 +70,7 @@ class SignupActivity2 : AppCompatActivity() {
         Toast.makeText(baseContext, "adding new",
             Toast.LENGTH_LONG).show();
 
-        /*
+
         database.child("userTable")
             .child(newUser.username).setValue(newUser)
             .addOnSuccessListener {
@@ -81,6 +83,6 @@ class SignupActivity2 : AppCompatActivity() {
                     Toast.LENGTH_LONG).show();
             }
 
-         */
+
     }
 }

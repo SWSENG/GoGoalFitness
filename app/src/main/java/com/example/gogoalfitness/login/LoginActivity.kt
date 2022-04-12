@@ -1,5 +1,6 @@
 package com.example.gogoalfitness.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -24,6 +25,11 @@ class LoginActivity : AppCompatActivity() {
             val password:String = binding.editTextPasswordLogin.text.toString()
             loginUser(email,password)
         }
+
+        binding.tvForgotPassword.setOnClickListener(){
+            val intent = Intent(this,ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun loginUser(email: String, password: String) {
@@ -31,6 +37,10 @@ class LoginActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 Toast.makeText(baseContext, "Login Successfull",
                     Toast.LENGTH_LONG).show();
+
+                //to home page home fragment
+                //val intent = Intent(this,Home::class.java)
+                //startActivity(intent)
             }
             .addOnFailureListener { ex->
                 Toast.makeText(baseContext, ex.message.toString(),
