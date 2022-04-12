@@ -15,6 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGoalFitness">
         <activity
+            android:name=".login.SignupActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".login.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.AccountCreatedActivity"
+            android:exported="false" />
+        <activity
             android:name=".StartArmWorkout"
             android:exported="false" />
         <activity

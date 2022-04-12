@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "182380050058",
+    "firebase_url": "https://gogoal-338fa-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "gogoal-338fa",
+    "storage_bucket": "gogoal-338fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182380050058:android:85deb96f8ee40893a89f73",
+        "android_client_info": {
+          "package_name": "com.example.assignmentlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182380050058-1m4195b3oqsqvh3rgv6pef37pshm1mtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE_8V2zDzPRBezTWNJzzGlsxjZQZgIO1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182380050058-1m4195b3oqsqvh3rgv6pef37pshm1mtf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182380050058:android:85fcbed7cc3dd0ffa89f73",
+        "android_client_info": {
+          "package_name": "com.example.gogoalfitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182380050058-1m4195b3oqsqvh3rgv6pef37pshm1mtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE_8V2zDzPRBezTWNJzzGlsxjZQZgIO1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182380050058-1m4195b3oqsqvh3rgv6pef37pshm1mtf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
