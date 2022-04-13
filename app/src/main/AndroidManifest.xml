@@ -15,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGoalFitness">
         <activity
+            android:name=".statistic.WeightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".statistic.AllHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".statistic.HistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".login.SignupActivity2"
             android:exported="false" />
         <activity

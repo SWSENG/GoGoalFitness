@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.HomeFragment">
+
+
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/splashScreenYellow">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/splashScreenYellow"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="150dp"
                 android:background="@drawable/dashboard_bg"
                 android:padding="20dp">
 
                 <TextView
+                    android:id="@+id/statTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
@@ -29,113 +35,281 @@
                     android:textColor="@color/splashScreenYellow"
                     android:textSize="50sp" />
 
-                <Button
-                    android:id="@+id/btn_history"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="1dp"
-                    android:text=">> view history"
-                    android:textColor="@color/splashScreenYellow"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:backgroundTint="@android:color/transparent" />
-
             </RelativeLayout>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/weightStats"
-                android:layout_width="398dp"
+                android:layout_width="match_parent"
                 android:layout_height="143dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="283dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Weight(kg)"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnWeightDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="20dp"
+                            android:text="Edit"
+
+                            android:textColor="@color/splashScreenYellow"
+                            app:backgroundTint="@color/dashboardRed" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvStartWeight"
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvLatestWeight"
+                            android:layout_width="121dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvChangeWeight"
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="135dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:text="START"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView23"
+                            android:layout_width="125dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:text="CURRENT"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="135dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:text="CHANGE"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="217dp"
+                    android:layout_height="47dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginLeft="12dp"
+                    android:paddingTop="13dp"
+                    android:text="All Time"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="11dp"
+                    android:text="view history"
+                    android:textAlignment="center"
+                    android:textColor="@color/splashScreenYellow"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/dashboardRed" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="30dp"
                 app:cardElevation="10dp">
 
-                <TableLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
 
-                    <TableRow
+                    <TextView
+                        android:id="@+id/textView89"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:text="Workouts"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="195dp"
-                            android:layout_height="wrap_content"
-                            android:paddingLeft="15dp"
-                            android:text="Weight (kg)" />
-
-                        <Button
-                            android:id="@+id/button5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Button" />
-                    </TableRow>
-
-                    <TableRow
+                    <TextView
+                        android:id="@+id/tvTotalWorkOut"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:id="@+id/textView13"
-                            android:layout_width="224dp"
-                            android:layout_height="30dp"
-                            android:includeFontPadding="false"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:id="@+id/textView14"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </TableLayout>
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="75dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/workoutDisplay"
-                    android:layout_width="190dp"
-                    android:layout_height="326dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="30dp"
-                    app:cardElevation="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/calDisplay"
-                    android:layout_width="190dp"
-                    android:layout_height="323dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="30dp"
-                    app:cardElevation="10dp">
+                    <TextView
+                        android:id="@+id/workoutTime"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:text="Workout Time"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textStyle="bold" />
 
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvTotalWorkOutTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/totalCalory"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:text="Calories"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTotalCalory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 

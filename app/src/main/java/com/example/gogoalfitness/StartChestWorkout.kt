@@ -98,6 +98,9 @@ class StartChestWorkout : AppCompatActivity() {private var restTimer : CountDown
                 }else{
                     finish()
                     val intent = Intent(this@StartChestWorkout, FinishActivity::class.java)
+                    intent.putExtra("WorkName", "chest")
+                    intent.putExtra("WorkMin", "3")
+                    intent.putExtra("WorkCalories", "80")
                     startActivity(intent)
                 }
             }

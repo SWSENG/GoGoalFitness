@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imgHistory"
+        android:layout_width="105dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvHisDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/imgHistory"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHisWorkout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toEndOf="@+id/imgHistory"
+        app:layout_constraintTop_toBottomOf="@+id/tvHisDate" />
+
+    <TextView
+        android:id="@+id/tvHisTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toEndOf="@+id/tvHisDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHisMins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toEndOf="@+id/imgHistory"
+        app:layout_constraintTop_toBottomOf="@+id/tvHisTime" />
+
+    <TextView
+        android:id="@+id/tvHisCal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toEndOf="@+id/imgHistory"
+        app:layout_constraintTop_toBottomOf="@+id/tvHisTime" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Workout"
+        app:layout_constraintBottom_toBottomOf="@+id/imgHistory"
+        app:layout_constraintStart_toEndOf="@+id/imgHistory"
+        app:layout_constraintTop_toBottomOf="@+id/tvHisWorkout"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Mins"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/tvHisMins" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Calories"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/tvHisCal"
+        app:layout_constraintVertical_bias="0.09" />
+</androidx.constraintlayout.widget.ConstraintLayout>
