@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.example.gogoalfitness.fragment.HomeFragment
+import com.example.gogoalfitness.fragment.StatisticFragment
+import com.example.gogoalfitness.login.SignupActivity2
+import com.example.gogoalfitness.statistic.HistoryActivity
 
 class SplashActivity : AppCompatActivity() {
 
-    private val SPLASHTIME: Long = 3000
+    private val SPLASHTIME: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,60 +1,109 @@
 package com.example.gogoalfitness.fragment
 
+import android.content.Intent
+import android.icu.number.IntegerWidth
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.gogoalfitness.R
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.gogoalfitness.databinding.FragmentStatisticBinding
+import com.example.gogoalfitness.statistic.*
+import com.google.firebase.database.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [StatisticFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class StatisticFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var database : DatabaseReference
+    private lateinit var weightDatabase : DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_statistic, container, false)
-    }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment StatisticFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            StatisticFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        val bind = FragmentStatisticBinding.inflate(layoutInflater)
+        var totalWork = 0
+        var totalMin = 0
+        var totalCal = 0
+        var weightStart = ""
+        var weightCurrent = ""
+        var weightChange = 0
+        val historyModel = ViewModelProvider(this).get(HistoryModel::class.java)
+
+        database = FirebaseDatabase.getInstance().getReference("WorkoutHistory")
+        weightDatabase =  FirebaseDatabase.getInstance().getReference("UserWeight")
+
+        database.addValueEventListener( object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (workoutSnapshot in dataSnapshot.children) {
+                    totalWork += 1
+                    var min = workoutSnapshot.child("minutes").value.toString()
+                    var cal = workoutSnapshot.child("calories").value.toString()
+                    totalMin += min.toInt()
+                    totalCal += cal.toInt()
+                    historyModel.totalWorkout.value = totalWork.toString()
+                    historyModel.totalMin.value = totalMin.toString()
+                    historyModel.totalCalories.value = totalCal.toString()
+
                 }
             }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Getting Post failed, log a message
+                Log.d("error", databaseError.toString())
+            }
+        })
+
+        weightDatabase.get()
+            .addOnSuccessListener {
+                    result-> weightStart = result.child("weightStart").value.toString()
+                weightCurrent = result.child("weightCurrent").value.toString()
+                weightChange = weightCurrent.toInt() - weightStart.toInt()
+                historyModel.weightChange.value = weightChange.toString()
+                historyModel.weightStart.value = weightStart.toString()
+                historyModel.weightCurrent.value = weightCurrent.toString()
+            }
+            .addOnFailureListener{ex-> bind.tvStartWeight.text = ex.message}
+
+
+        weightStart = bind.tvStartWeight.text.toString()
+
+        historyModel.totalCalories.observe(viewLifecycleOwner, { newValue ->
+            bind.tvTotalCalory.text = newValue
+        })
+
+        historyModel.totalWorkout.observe(viewLifecycleOwner, { newValue ->
+            bind.tvTotalWorkOut.text = newValue
+        })
+
+        historyModel.totalMin.observe(viewLifecycleOwner, { newValue ->
+            bind.tvTotalWorkOutTime.text = newValue
+        })
+
+        historyModel.weightChange.observe(viewLifecycleOwner, { newValue ->
+            bind.tvChangeWeight.text = newValue
+        })
+
+        historyModel.weightCurrent.observe(viewLifecycleOwner, { newValue ->
+            bind.tvLatestWeight.text = newValue
+        })
+
+        historyModel.weightStart.observe(viewLifecycleOwner, { newValue ->
+            bind.tvStartWeight.text = newValue
+        })
+
+        bind.btnHistory.setOnClickListener {
+            val intent = Intent(this@StatisticFragment.requireContext(), HistoryActivity::class.java)
+            startActivity(intent)
+        }
+
+        bind.btnWeightDetail.setOnClickListener {
+            val intent = Intent(this@StatisticFragment.requireContext(), WeightActivity::class.java)
+            startActivity(intent)
+        }
+
+        return bind.root
     }
 }

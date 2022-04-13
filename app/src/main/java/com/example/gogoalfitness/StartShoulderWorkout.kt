@@ -102,6 +102,9 @@ class StartShoulderWorkout : AppCompatActivity() {
                 }else{
                     finish()
                     val intent = Intent(this@StartShoulderWorkout, FinishActivity::class.java)
+                    intent.putExtra("WorkName", "shoulder")
+                    intent.putExtra("WorkMin", "3")
+                    intent.putExtra("WorkCalories", "70")
                     startActivity(intent)
                 }
             }

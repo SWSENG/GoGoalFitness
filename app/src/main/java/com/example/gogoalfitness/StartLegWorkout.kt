@@ -99,6 +99,9 @@ class StartLegWorkout : AppCompatActivity() {
                 }else{
                     finish()
                     val intent = Intent(this@StartLegWorkout, FinishActivity::class.java)
+                    intent.putExtra("WorkName", "leg")
+                    intent.putExtra("WorkMin", "3")
+                    intent.putExtra("WorkCalories", "100")
                     startActivity(intent)
                 }
             }
