@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.gogoalfitness.EditProfileActivity
 import com.example.gogoalfitness.R
 import com.example.gogoalfitness.databinding.ActivitySignupBinding
 import java.util.*
@@ -51,6 +52,13 @@ class SignupActivity : AppCompatActivity() {
             intent.putExtra("Height",binding.editTextHeight.text.toString())
             intent.putExtra("Weight",binding.editTextCurrentWeight.text.toString())
             startActivity(intent)
+
+            val intent2 = Intent(this,EditProfileActivity::class.java)
+            intent2.putExtra("Gender",gender)
+            intent2.putExtra("Birthdate",binding.tvResultBirthdate.text.toString())
+            intent2.putExtra("Height",binding.editTextHeight.text.toString())
+            intent2.putExtra("Weight",binding.editTextCurrentWeight.text.toString())
+            startActivity(intent2)
         }
     }
 }

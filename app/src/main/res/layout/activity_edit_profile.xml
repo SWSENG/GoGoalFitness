@@ -76,12 +76,102 @@
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:inputType="textPersonName"
-                            android:text="Name" />
+                            android:hint="Name" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/editGmailCard"
+                    android:id="@+id/editGenderCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <RadioGroup
+                            android:id="@+id/radioGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+                            <RadioButton
+                                android:id="@+id/radioMale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Male"
+                                android:checked="true" />
+                            <RadioButton
+                                android:id="@+id/radioFemale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Female" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ediBirthdayCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/editBirthdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Birthdate"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/imageButtonCalendar"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            app:srcCompat="@drawable/buttoncalendar" />
+
+                        <DatePicker
+                            android:id="@+id/edtDatePicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:datePickerMode="spinner"
+                            android:calendarViewShown="false"/>
+
+                        <TextView
+                            android:id="@+id/edtResultBirthdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12/4/2022"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/editHeightCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
@@ -98,17 +188,17 @@
                         android:padding="16dp">
 
                         <EditText
-                            android:id="@+id/editTextTextPersonGmail"
+                            android:id="@+id/editTextTextPersonHeight"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:inputType="textEmailAddress"
-                            android:text="Gmail" />
+                            android:inputType="text"
+                            android:hint="Height" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/editPasswordCard"
+                    android:id="@+id/editWeightCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
@@ -125,12 +215,12 @@
                         android:padding="16dp">
 
                         <EditText
-                            android:id="@+id/editTextTextPersonPassword"
+                            android:id="@+id/editTextTextPersonWeight"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:inputType="textPassword"
-                            android:text="Password" />
+                            android:inputType="text"
+                            android:hint="Weight" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </GridLayout>

@@ -69,7 +69,7 @@
             android:layout_width="315dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="355dp"
+            android:layout_marginTop="250dp"
             android:backgroundTint="#FFB26A"
             android:text="log in"
             android:textAlignment="center"
