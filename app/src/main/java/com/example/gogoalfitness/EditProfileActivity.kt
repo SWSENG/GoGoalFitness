@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gogoalfitness.databinding.ActivityEditProfileBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserInfo
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_edit_profile.*
 import java.util.*
@@ -26,7 +27,17 @@ class EditProfileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
+        val user = firebaseAuth.currentUser
+        if (user != null) {
+            // User is signed in
+        } else {
+            // No user is signed in
+        }
 
+        user?.let {
+            val uid = user.uid
+            databaseReference = FirebaseDatabase.getInstance().getReference(uid).child("UserInfo")
+        }
 
         binding.edtDatePicker.visibility = View.GONE
 
@@ -57,20 +68,23 @@ class EditProfileActivity : AppCompatActivity() {
                 R.id.radioFemale -> "Female"
                 else -> ""
             }
-            val birthday = binding.edtResultBirthdate.text.toString()
-            updateData(username, height, weight, gender, birthday)
+            val birthdate = binding.edtResultBirthdate.text.toString()
+            updateData(username, height, weight, gender, birthdate)
         }
     }
 
     private fun getUserData() {
-        val gender = intent.getStringExtra("Gender").toString()
-        val birthdate = intent.getStringExtra("Birthdate").toString()
-        val height = intent.getStringExtra("Height").toString()
-        val weight = intent.getStringExtra("Weight").toString()
+        databaseReference.get()
+            .addOnSuccessListener {
+                    result-> binding.editTextTextPersonName.setText(result.child("username").value.toString())
+                binding.editTextTextPersonHeight.setText(result.child("height").value.toString())
+                binding.editTextTextPersonWeight.setText(result.child("weight").value.toString())
+                binding.edtResultBirthdate.text =
+                    result.child("birthdate").value.toString()
+            }
+            .addOnFailureListener{
 
-
-        binding.editTextTextPersonHeight.setText(height)
-        binding.editTextTextPersonWeight.setText(weight)
+            }
     }
 
     private fun updateData(
@@ -78,26 +92,20 @@ class EditProfileActivity : AppCompatActivity() {
         height: String,
         weight: String,
         gender: String,
-        birthday: String
+        birthdate: String
     ) {
-        databaseReference = FirebaseDatabase.getInstance().getReference("userTable")
         val user = mapOf<String,String>(
             "username" to username,
             "height" to height,
             "weight" to weight,
             "gender" to gender,
-            "birthday" to birthday
+            "birthday" to birthdate
         )
-        val currentuser = FirebaseAuth.getInstance().currentUser!!.uid
 
-        if (currentuser != null) {
-            databaseReference.child(currentuser).updateChildren(user).addOnSuccessListener {
-
-                Toast.makeText(this,"Success to update", Toast.LENGTH_SHORT).show()
-
-            }.addOnFailureListener {
-                Toast.makeText(this,"Failed to update", Toast.LENGTH_SHORT).show()
-            }
-        }
+        databaseReference.child("username").setValue(username)
+        databaseReference.child("height").setValue(height)
+        databaseReference.child("weight").setValue(weight)
+        databaseReference.child("gender").setValue(gender)
+        databaseReference.child("birthdate").setValue(birthdate)
     }
 }

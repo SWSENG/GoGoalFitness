@@ -11,13 +11,33 @@ import com.example.gogoalfitness.EditProfileActivity
 import com.example.gogoalfitness.ReminderActivity
 import com.example.gogoalfitness.SplashActivity
 import com.example.gogoalfitness.databinding.FragmentSettingBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class SettingFragment : Fragment() {
+    private lateinit var auth: FirebaseAuth
+    private lateinit var database: DatabaseReference
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        auth = FirebaseAuth.getInstance()
+        val user = auth.currentUser
+        if (user != null) {
+            // User is signed in
+        } else {
+            // No user is signed in
+        }
+
+        user?.let {
+            val uid = user.uid
+            database = FirebaseDatabase.getInstance().getReference(uid).child("UserInfo")
+        }
 
         val bind = FragmentSettingBinding.inflate(layoutInflater)
         // Inflate the layout for this fragment
@@ -58,6 +78,7 @@ class SettingFragment : Fragment() {
         }
 
         bind.SignOutCard.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
             val intent = Intent(this@SettingFragment.requireContext(), SplashActivity::class.java)
             startActivity(intent)
         }
@@ -67,6 +88,16 @@ class SettingFragment : Fragment() {
             startActivity(intent)
 
         }
+
+        database.get()
+            .addOnSuccessListener {
+                    result-> bind.ProfileName.text =
+                result.child("username").value.toString()
+
+            }
+            .addOnFailureListener{
+
+            }
 
         return bind.root
     }
