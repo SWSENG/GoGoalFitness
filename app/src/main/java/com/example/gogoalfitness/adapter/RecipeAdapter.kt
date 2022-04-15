@@ -9,14 +9,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gogoalfitness.R
 import com.example.gogoalfitness.list.RecipeInfo
+import com.squareup.picasso.Picasso
 
 class RecipeAdapter(private val recipeArrayList:ArrayList<RecipeInfo>, private val listener: OnItemClickListener)
     : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
 
-    inner class RecipeViewHolder(view: View): RecyclerView.ViewHolder(view), View.OnClickListener{
+    inner class RecipeViewHolder(view: View):RecyclerView.ViewHolder(view), View.OnClickListener{
 
-        var image: ImageView = view.findViewById(R.id.recipeThumbnail)
-        var title: TextView = view.findViewById(R.id.recipeTitle)
+        var image:ImageView = view.findViewById(R.id.recipeThumbnail)
+        var title:TextView = view.findViewById(R.id.recipeTitle)
         var calories: TextView = view.findViewById(R.id.recipeCalories)
 
         init{
@@ -50,7 +51,7 @@ class RecipeAdapter(private val recipeArrayList:ArrayList<RecipeInfo>, private v
         val currentRec = recipeArrayList[position]
 
         holder.title.text = currentRec.name
-        holder.image.setImageURI(Uri.parse(currentRec.image))
+        Picasso.get().load(currentRec.image).into(holder.image)
         holder.calories.text = currentRec.calories
 
     }

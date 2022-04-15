@@ -4,12 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.gogoalfitness.R
-import com.google.firebase.database.*
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.history_view.view.*
 
 class HistoryAdapter(private val historyList:ArrayList<History>) :RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
