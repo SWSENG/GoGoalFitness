@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGoalFitness">
         <activity
+            android:name=".RecipeViewMoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecipeDetailsActivity"
             android:exported="false" />
         <activity

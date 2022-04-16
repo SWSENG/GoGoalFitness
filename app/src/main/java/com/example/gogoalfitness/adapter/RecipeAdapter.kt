@@ -27,14 +27,14 @@ class RecipeAdapter(private val recipeArrayList:ArrayList<RecipeInfo>, private v
         override fun onClick(v: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION){
-                listener.itemClick(position)
+                listener.itemClick(recipeArrayList,position)
             }
         }
 
     }
 
     interface OnItemClickListener{
-        fun itemClick(position: Int)
+        fun itemClick(arrayList: ArrayList<RecipeInfo>, position: Int)
     }
 
     override fun onCreateViewHolder(
