@@ -56,6 +56,7 @@
         <entry key="..\:/Android Practical/GoGoalFitness/app/src/main/res/menu/navigation.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_account_created.xml" value="0.30277777777777776" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_arm.xml" value="0.18489583333333334" />
+        <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_bookmark.xml" value="0.33055555555555555" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_chest.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_destination.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_edit_profile.xml" value="0.18489583333333334" />
@@ -79,6 +80,7 @@
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/fragment_recipe.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/item_recipe.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/menu/menu.xml" value="0.1" />
+        <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/menu/recipe_menu.xml" value="0.33055555555555555" />
       </map>
     </option>
   </component>

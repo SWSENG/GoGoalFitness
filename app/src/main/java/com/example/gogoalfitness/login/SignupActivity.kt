@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 import java.util.*
 
 class SignupActivity : AppCompatActivity() {
-    private lateinit var binding : ActivitySignupBinding
+    private lateinit var binding: ActivitySignupBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
 
@@ -28,7 +28,7 @@ class SignupActivity : AppCompatActivity() {
 
         binding.datePicker.visibility = View.GONE
 
-        binding.imageButtonCalendar.setOnClickListener(){
+        binding.imageButtonCalendar.setOnClickListener() {
             if (binding.datePicker.visibility == View.VISIBLE)
                 binding.datePicker.visibility = View.GONE
             else if (binding.datePicker.visibility == View.GONE)
@@ -36,19 +36,21 @@ class SignupActivity : AppCompatActivity() {
         }
 
         val today = Calendar.getInstance()
-        binding.datePicker.init(today.get(Calendar.YEAR),today.get(Calendar.MONTH),today.get(
-            Calendar.DAY_OF_MONTH)){
-                view,year,month,day->
-            val month = month+1
+        binding.datePicker.init(
+            today.get(Calendar.YEAR), today.get(Calendar.MONTH), today.get(
+                Calendar.DAY_OF_MONTH
+            )
+        ) { view, year, month, day ->
+            val month = month + 1
 
             binding.tvResultBirthdate.text = "$day/$month/$year"
         }
 
 
 
-        binding.btnNext.setOnClickListener(){
+        binding.btnNext.setOnClickListener() {
 
-            val gender:String = when (binding.rgGender.checkedRadioButtonId){
+            val gender: String = when (binding.rgGender.checkedRadioButtonId) {
                 R.id.radioButtonMale -> "Male"
                 R.id.radioButtonFemale -> "Female"
                 else -> ""
@@ -58,13 +60,9 @@ class SignupActivity : AppCompatActivity() {
             val height = binding.editTextHeight.text.toString()
             val weight = binding.editTextCurrentWeight.text.toString()
 
-            var newUser = UserInfo(username,gender,birthdate,height,weight)
+            var newUser = UserInfo(username, gender, birthdate, height, weight)
             addNewUserInfo(newUser)
-            val intent = Intent(this,AccountCreatedActivity::class.java)
-//            intent.putExtra("Gender",gender)
-//            intent.putExtra("Birthdate",binding.tvResultBirthdate.text.toString())
-//            intent.putExtra("Height",binding.editTextHeight.text.toString())
-//            intent.putExtra("Weight",binding.editTextCurrentWeight.text.toString())
+            val intent = Intent(this, AccountCreatedActivity::class.java)
             startActivity(intent)
 
         }
@@ -83,19 +81,25 @@ class SignupActivity : AppCompatActivity() {
             database = FirebaseDatabase.getInstance().getReference(uid).child("UserInfo")
         }
 
-        Toast.makeText(baseContext, "adding new",
-            Toast.LENGTH_LONG).show();
+        Toast.makeText(
+            baseContext, "adding new",
+            Toast.LENGTH_LONG
+        ).show();
 
 
         database.setValue(newUser)
             .addOnSuccessListener {
-                Toast.makeText(baseContext, "User info added",
-                    Toast.LENGTH_LONG).show();
+                Toast.makeText(
+                    baseContext, "User info added",
+                    Toast.LENGTH_LONG
+                ).show();
 
             }
-            .addOnFailureListener { ex->
-                Toast.makeText(baseContext, ex.message.toString(),
-                    Toast.LENGTH_LONG).show();
+            .addOnFailureListener { ex ->
+                Toast.makeText(
+                    baseContext, ex.message.toString(),
+                    Toast.LENGTH_LONG
+                ).show();
             }
 
 

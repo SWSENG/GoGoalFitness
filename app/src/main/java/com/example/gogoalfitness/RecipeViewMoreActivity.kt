@@ -25,7 +25,7 @@ class RecipeViewMoreActivity : AppCompatActivity(), RecipeAdapter.OnItemClickLis
 
         val tempArrayList = arrayListOf<RecipeInfo>()
 
-        val adapter = RecipeAdapter(tempArrayList,this)
+        val adapter = RecipeAdapter(tempArrayList, this)
 
         database = FirebaseDatabase.getInstance().getReference(path)
         database.addValueEventListener(object : ValueEventListener {
@@ -39,7 +39,8 @@ class RecipeViewMoreActivity : AppCompatActivity(), RecipeAdapter.OnItemClickLis
                     tempArrayList.add(RecipeInfo(name, image, calories, ingredients, directions))
 
                     binding.recyclerViewViewMore.adapter = adapter
-                    binding.recyclerViewViewMore.layoutManager = GridLayoutManager(applicationContext, 2)
+                    binding.recyclerViewViewMore.layoutManager =
+                        GridLayoutManager(applicationContext, 2)
                     binding.recyclerViewViewMore.setHasFixedSize(true)
                 }
 

@@ -50,29 +50,5 @@
         android:textColor="@color/black"
         android:textSize="14dp" />
 
-    <ImageButton
-        android:id="@+id/logoBookmark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
-        android:background="@android:color/transparent"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/iconbookmarkfill" />
-
-    <ImageButton
-        android:id="@+id/btnBookmark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/iconbookmark" />
-
 
 </RelativeLayout>

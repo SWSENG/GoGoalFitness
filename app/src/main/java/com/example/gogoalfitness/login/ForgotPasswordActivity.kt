@@ -18,22 +18,28 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        binding.btnSubmit.setOnClickListener(){
-            val email:String = binding.editTextEmailAddressForgotPassword.text.toString().trim() { it <= ' '}
+        binding.btnSubmit.setOnClickListener() {
+            val email: String =
+                binding.editTextEmailAddressForgotPassword.text.toString().trim() { it <= ' ' }
 
-            if (email.isEmpty()){
-                Toast.makeText(baseContext, "Please enter email address.",
-                    Toast.LENGTH_LONG).show();
-            }
-            else{
+            if (email.isEmpty()) {
+                Toast.makeText(
+                    baseContext, "Please enter email address.",
+                    Toast.LENGTH_LONG
+                ).show();
+            } else {
                 auth.sendPasswordResetEmail(email)
                     .addOnSuccessListener {
-                        Toast.makeText(baseContext, "Link sent to your email.",
-                            Toast.LENGTH_LONG).show();
+                        Toast.makeText(
+                            baseContext, "Link sent to your email.",
+                            Toast.LENGTH_LONG
+                        ).show();
                     }
-                    .addOnFailureListener { ex->
-                        Toast.makeText(baseContext, ex.message.toString(),
-                            Toast.LENGTH_LONG).show();
+                    .addOnFailureListener { ex ->
+                        Toast.makeText(
+                            baseContext, ex.message.toString(),
+                            Toast.LENGTH_LONG
+                        ).show();
                     }
             }
         }

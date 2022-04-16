@@ -1,8 +1,9 @@
 package com.example.gogoalfitness.list
 
 data class RecipeInfo(
-    var name:String? = null,
-    var image:String? = null,
-    var calories:String? = null,
-    var ingredients:String? = null,
-    var directions:String? = null)
+    var name: String = "",
+    var image: String = "",
+    var calories: String = "",
+    var ingredients: String = "",
+    var directions: String = ""
+)
