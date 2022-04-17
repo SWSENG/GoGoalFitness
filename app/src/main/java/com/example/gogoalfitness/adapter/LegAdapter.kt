@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.gogoalfitness.R
 import com.example.gogoalfitness.list.LegList
 
@@ -23,7 +24,7 @@ class LegAdapter(private val context: Activity, private val arrayList: ArrayList
         val legTitle: TextView = view.findViewById(R.id.listWorkoutText)
         val legSubTitle: TextView = view.findViewById(R.id.timeOverListWorkout)
 
-        legImageView.setImageResource(arrayList[position].imageId)
+        Glide.with(context).load(arrayList[position].gifId).into(legImageView)
         legTitle.text = arrayList[position].title
         legSubTitle.text = arrayList[position].subTitle
 

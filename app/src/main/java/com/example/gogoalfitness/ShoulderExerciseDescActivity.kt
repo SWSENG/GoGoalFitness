@@ -2,6 +2,7 @@ package com.example.gogoalfitness
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import com.example.gogoalfitness.databinding.ActivityExerciseDescBinding
 
 class ShoulderExerciseDescActivity : AppCompatActivity() {
@@ -13,10 +14,13 @@ class ShoulderExerciseDescActivity : AppCompatActivity() {
         binding = ActivityExerciseDescBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val tutorial = intent.getIntExtra("gifId", R.drawable.armraises)
+        val tutorial = intent.getStringExtra("gifId")
         val desc = intent.getStringExtra("desc")
 
-        binding.videoView.setImageResource(tutorial)
+        Glide.with(applicationContext).load(tutorial).into(binding.videoView)
         binding.workoutTextDesc.text = desc
+
+        binding.workoutTextDesc.text =
+            (binding.workoutTextDesc.text as String).replace("\\n", "\n")
     }
 }

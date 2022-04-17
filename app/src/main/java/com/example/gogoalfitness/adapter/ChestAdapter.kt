@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.gogoalfitness.R
 import com.example.gogoalfitness.list.ChestList
 
@@ -23,7 +24,7 @@ class ChestAdapter (private val context: Activity, private val arrayList: ArrayL
         val chestTitle: TextView = view.findViewById(R.id.listWorkoutText)
         val chestSubTitle: TextView = view.findViewById(R.id.timeOverListWorkout)
 
-        chestImageView.setImageResource(arrayList[position].imageId)
+        Glide.with(context).load(arrayList[position].gifId).into(chestImageView)
         chestTitle.text = arrayList[position].title
         chestSubTitle.text = arrayList[position].subTitle
 
