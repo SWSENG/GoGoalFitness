@@ -14,6 +14,7 @@ class AccountCreatedActivity : AppCompatActivity() {
         binding = ActivityAccountCreatedBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.btnStart.setOnClickListener(){
             //to home page/home fragment
             //val intent = Intent(this,Home::class.java)

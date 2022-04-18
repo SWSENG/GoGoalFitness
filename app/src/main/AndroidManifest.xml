@@ -17,13 +17,20 @@
         android:theme="@style/Theme.GoGoalFitness">
         <activity
             android:name=".BookmarkActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.GoGoalFitness.NoActionBar"
+            android:parentActivityName=".NavigationActivity"/>
+
         <activity
             android:name=".RecipeViewMoreActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.GoGoalFitness.NoActionBar"
+            android:parentActivityName=".NavigationActivity"/>
         <activity
             android:name=".RecipeDetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.GoGoalFitness.NoActionBar"
+            android:parentActivityName=".NavigationActivity"/>
         <activity
             android:name=".statistic.WeightActivity"
             android:exported="false" />
@@ -35,22 +42,32 @@
             android:exported="false" />
         <activity
             android:name=".login.SignupActivity2"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.GoGoalFitness.NoActionBar"
+            android:parentActivityName=".login.SignupActivity"/>
         <activity
             android:name=".login.SignupActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.GoGoalFitness.NoActionBar"
+            android:parentActivityName=".login.MainActivity"/>
         <activity
             android:name=".login.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.GoGoalFitness.NoActionBar"
+            android:parentActivityName=".login.MainActivity"/>
         <activity
             android:name=".login.ForgotPasswordActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.GoGoalFitness.NoActionBar"
+            android:parentActivityName=".login.LoginActivity"/>
         <activity
             android:name=".login.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.GoGoalFitness.NoActionBar"/>
         <activity
             android:name=".login.AccountCreatedActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.GoGoalFitness.NoActionBar"/>
         <activity
             android:name=".StartArmWorkout"
             android:exported="false" />

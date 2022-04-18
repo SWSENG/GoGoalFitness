@@ -19,6 +19,9 @@ class SignupActivity2 : AppCompatActivity() {
         binding = ActivitySignup2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbarSignup2)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         auth = FirebaseAuth.getInstance()
 
         //if no exist in database auto create for us

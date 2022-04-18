@@ -17,7 +17,7 @@
             android:layout_height="60dp"
             android:background="#FD7869"
             app:title="Bookmarked Recipe"
-            app:titleTextColor="#FFE2A9" />
+            app:titleTextColor="#FFE2A9"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 

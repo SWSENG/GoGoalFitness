@@ -1,9 +1,11 @@
 package com.example.gogoalfitness
 
+import android.R
 import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +31,9 @@ class RecipeDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRecipeDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbarRecipeDetails)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         auth = FirebaseAuth.getInstance()
         val user = auth.currentUser
@@ -124,4 +129,13 @@ class RecipeDetailsActivity : AppCompatActivity() {
 
 
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+        when (item.itemId) {
+            R.id.home -> finish()
+        }
+        return true
+    }
+
 }

@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         auth = FirebaseAuth.getInstance()
 
         //when no logout keep the user loging in
