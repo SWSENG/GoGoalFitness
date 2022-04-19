@@ -1,8 +1,10 @@
 package com.example.gogoalfitness
 
+import android.R
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +21,9 @@ class RecipeViewMoreActivity : AppCompatActivity(), RecipeAdapter.OnItemClickLis
         super.onCreate(savedInstanceState)
         binding = ActivityRecipeViewMoreBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbarRecipeViewMore)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.toolbarRecipeViewMore.title = intent.getStringExtra("title").toString()
         val path = intent.getStringExtra("path").toString()
@@ -65,5 +70,13 @@ class RecipeViewMoreActivity : AppCompatActivity(), RecipeAdapter.OnItemClickLis
         intent.putExtra("ingredients", arrayList[position].ingredients)
         intent.putExtra("directions", arrayList[position].directions)
         startActivity(intent)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+        when (item.itemId) {
+            R.id.home -> finish()
+        }
+        return true
     }
 }

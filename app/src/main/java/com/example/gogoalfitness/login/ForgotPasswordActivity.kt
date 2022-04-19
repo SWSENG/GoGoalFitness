@@ -16,6 +16,9 @@ class ForgotPasswordActivity : AppCompatActivity() {
         binding = ActivityForgotPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbarForgotPassword)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         auth = FirebaseAuth.getInstance()
 
         binding.btnSubmit.setOnClickListener() {

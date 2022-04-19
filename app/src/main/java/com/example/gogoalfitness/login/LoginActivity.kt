@@ -1,11 +1,10 @@
 package com.example.gogoalfitness.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.gogoalfitness.NavigationActivity
-import com.example.gogoalfitness.R
 import com.example.gogoalfitness.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -19,11 +18,15 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbarLogin)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         auth = FirebaseAuth.getInstance()
 
         binding.btnLogInLogIn.setOnClickListener() {
             val email: String = binding.editTextEmailAddressLogin.text.toString()
             val password: String = binding.editTextPasswordLogin.text.toString()
+
             loginUser(email, password)
         }
 

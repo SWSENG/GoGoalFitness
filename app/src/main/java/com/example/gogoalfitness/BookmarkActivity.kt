@@ -1,15 +1,12 @@
 package com.example.gogoalfitness
 
-import android.content.ContentValues.TAG
+import android.R
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
+import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.gogoalfitness.adapter.RecipeAdapter
 import com.example.gogoalfitness.databinding.ActivityBookmarkBinding
 import com.example.gogoalfitness.list.RecipeInfo
@@ -28,6 +25,9 @@ class BookmarkActivity : AppCompatActivity(), RecipeAdapter.OnItemClickListener 
         super.onCreate(savedInstanceState)
         binding = ActivityBookmarkBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbarBookmark)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         auth = FirebaseAuth.getInstance()
         val user = auth.currentUser
@@ -86,5 +86,13 @@ class BookmarkActivity : AppCompatActivity(), RecipeAdapter.OnItemClickListener 
         intent.putExtra("ingredients", arrayList[position].ingredients)
         intent.putExtra("directions", arrayList[position].directions)
         startActivity(intent)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+        when (item.itemId) {
+            R.id.home -> finish()
+        }
+        return true
     }
 }
