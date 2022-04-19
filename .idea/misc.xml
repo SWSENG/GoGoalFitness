@@ -69,13 +69,13 @@
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_chest.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_destination.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_edit_profile.xml" value="0.18489583333333334" />
-        <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_forgot_password.xml" value="0.1" />
+        <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_forgot_password.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_leg.xml" value="0.3625" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_login.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_main.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_navigation.xml" value="0.3625" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_reminder.xml" value="0.3625" />
-        <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_signup.xml" value="0.75" />
+        <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_signup.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_signup2.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_splash.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/VOBO/AndroidStudioProjects/GoGoalFitness/app/src/main/res/layout/activity_start_workout.xml" value="0.18489583333333334" />
@@ -113,9 +113,9 @@
         <entry key="..\:/Users/ken/Desktop/GoGoalFitness/app/src/main/res/menu/menu.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_all_history.xml" value="0.6556016597510373" />
         <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_calendar.xml" value="0.43125" />
-        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_history.xml" value="0.3648148148148148" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_history.xml" value="0.25" />
         <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_shoulder.xml" value="0.27037037037037037" />
-        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_weight.xml" value="0.27037037037037037" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_weight.xml" value="0.5" />
         <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/calendar_day.xml" value="0.3962962962962963" />
         <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/calendar_day_layout.xml" value="0.30520833333333336" />
         <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/calendar_day_legend.xml" value="0.4421875" />

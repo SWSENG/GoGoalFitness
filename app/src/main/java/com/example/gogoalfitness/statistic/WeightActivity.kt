@@ -21,7 +21,6 @@ import com.google.firebase.database.FirebaseDatabase
 
 class WeightActivity : AppCompatActivity() {
     private lateinit var database : DatabaseReference
-    private lateinit var auth: FirebaseAuth
     private lateinit var binding : ActivityWeightBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,20 +32,25 @@ class WeightActivity : AppCompatActivity() {
         val user = FirebaseAuth.getInstance().currentUser
         var weightStart = ""
         var weightCurrent = ""
-        var weightChange = ""
+        var height = ""
 
         user?.let {
             val uid = user.uid
-            database = FirebaseDatabase.getInstance().getReference(uid).child("UserWeight")
+            database = FirebaseDatabase.getInstance().getReference(uid)
         }
 
         database.get()
             .addOnSuccessListener {
                     result->
-                weightCurrent = result.child("weightCurrent").value.toString()
-                weightStart = result.child("weightStart").value.toString()
-                //weightChange = result.child("weightChange").value.toString()
+                weightCurrent = result.child("UserWeight").child("weightCurrent").value.toString()
+                weightStart = result.child("UserWeight").child("weightStart").value.toString()
+                height = result.child("UserInfo").child("height").value.toString()
                 binding.tvWeightCurrent.text = weightCurrent
+                binding.tvHeightCurrent.text = height
+                val value = calBMI(weightCurrent.toDouble(), height.toDouble())
+                val bmiValue = String.format("%.1f", value).toDouble()
+                binding.tvBmiValue.setText(bmiValue.toString())
+                binding.tvWeightStatus.setText(weightStatus(bmiValue))
             }
             .addOnFailureListener{ex-> binding.tvWeightCurrent.text = ex.message}
 
@@ -66,5 +70,22 @@ class WeightActivity : AppCompatActivity() {
     private fun calWeightChange (newWeight:String, startWeight:String) : String {
 
         return (newWeight.toInt() - startWeight.toInt()).toString()
+    }
+
+    private fun calBMI(weight:Double, height:Double):Double {
+        val bmiValue = (weight / ((height / 100) * (height / 100)));
+        return  bmiValue
+    }
+
+    private fun weightStatus(bmi:Double):String {
+        if (bmi < 18.5) {
+            return "Underweight"
+        } else if (bmi >= 18.5 && bmi < 25) {
+            return "Healthy Weight Range";
+        } else if (bmi >= 25 && bmi < 30){
+            return "Overweight";
+        } else {
+            return "Obese";
+        }
     }
 }
