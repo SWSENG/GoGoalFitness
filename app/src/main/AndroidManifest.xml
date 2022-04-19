@@ -41,12 +41,12 @@
             android:name=".statistic.HistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".login.SignupActivity2"
+            android:name=".login.SignupActivity"
             android:exported="false"
             android:theme="@style/Theme.GoGoalFitness.NoActionBar"
-            android:parentActivityName=".login.SignupActivity"/>
+            android:parentActivityName=".login.SignupDetailsActivity"/>
         <activity
-            android:name=".login.SignupActivity"
+            android:name=".login.SignupDetailsActivity"
             android:exported="false"
             android:theme="@style/Theme.GoGoalFitness.NoActionBar"
             android:parentActivityName=".login.MainActivity"/>
