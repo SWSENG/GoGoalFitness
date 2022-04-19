@@ -31,6 +31,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvDateHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/histroy2"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toEndOf="@+id/tvHistoryLabel"
+        app:layout_constraintTop_toBottomOf="@+id/histroy2"
+        tools:text="text" />
+
+    <TextView
+        android:id="@+id/tvHistoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="History Date :"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/histroy2"
+        app:layout_constraintTop_toBottomOf="@+id/histroy2" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/allHistoryRecycleView"
         android:layout_width="0dp"
@@ -40,4 +63,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         tools:listitem="@layout/history_view" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,7 @@ class StartShoulderWorkout : AppCompatActivity() {
 
     private var exerciseTimer : CountDownTimer? = null
     private var exerciseProgress = 0
-    private var exerciseTime : Long = 30
+    private var exerciseTime : Long = 1
 
     private var shoulderList : ArrayList<ShoulderModel>? = null
     private var currentExercisePosition = -1
@@ -51,7 +51,7 @@ class StartShoulderWorkout : AppCompatActivity() {
     // rest
     private fun setRestProgressBar(){
         progressBar.progress = restProgress
-        restTimer = object : CountDownTimer(restTime*1000, 1000){
+        restTimer = object : CountDownTimer(restTime*11, 1){
 
             override fun onTick(millisUntilFinished: Long) {
                 restProgress++

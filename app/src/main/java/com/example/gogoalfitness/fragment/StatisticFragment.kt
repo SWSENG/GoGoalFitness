@@ -12,11 +12,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gogoalfitness.databinding.FragmentStatisticBinding
 import com.example.gogoalfitness.statistic.*
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class StatisticFragment : Fragment() {
     private lateinit var database : DatabaseReference
-    private lateinit var weightDatabase : DatabaseReference
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,15 +28,19 @@ class StatisticFragment : Fragment() {
         var totalWork = 0
         var totalMin = 0
         var totalCal = 0
-        var weightStart = ""
+        var weightStart:String? = ""
         var weightCurrent = ""
-        var weightChange = 0
+        var weightChange = ""
+        var initWeight = ""
         val historyModel = ViewModelProvider(this).get(HistoryModel::class.java)
+        val user = FirebaseAuth.getInstance().currentUser
 
-        database = FirebaseDatabase.getInstance().getReference("WorkoutHistory")
-        weightDatabase =  FirebaseDatabase.getInstance().getReference("UserWeight")
+        user?.let {
+            val uid = user.uid
+            database = FirebaseDatabase.getInstance().getReference(uid)
+        }
 
-        database.addValueEventListener( object : ValueEventListener {
+        database.child("WorkOutHistory").addValueEventListener( object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (workoutSnapshot in dataSnapshot.children) {
                     totalWork += 1
@@ -56,19 +61,39 @@ class StatisticFragment : Fragment() {
             }
         })
 
-        weightDatabase.get()
+        database.get()
             .addOnSuccessListener {
-                    result-> weightStart = result.child("weightStart").value.toString()
-                weightCurrent = result.child("weightCurrent").value.toString()
-                weightChange = weightCurrent.toInt() - weightStart.toInt()
-                historyModel.weightChange.value = weightChange.toString()
-                historyModel.weightStart.value = weightStart.toString()
-                historyModel.weightCurrent.value = weightCurrent.toString()
+                    result->
+                weightStart = result.child("UserWeight").child("weightStart").value.toString()
+                weightCurrent = result.child("UserWeight").child("weightCurrent").value.toString()
+                weightChange = result.child("UserWeight").child("weightChange").value.toString()
+                initWeight = result.child("UserInfo").child("weight").value.toString()
+
+                if(weightStart == "null"){
+                    database.child("UserWeight").child("weightStart").setValue(initWeight)
+                    database.child("UserWeight").child("weightCurrent").setValue(initWeight)
+                    database.child("UserWeight").child("weightChange").setValue("0")
+                    historyModel.weightStart.value = initWeight
+                    historyModel.weightCurrent.value = initWeight
+                    historyModel.weightChange.value = "0"
+                    //Log.d("check1", weightStart.toString())
+                }
+                else if(weightStart != initWeight){
+                    var _weightChange = calWeightChange(weightCurrent,initWeight)
+
+                    database.child("UserWeight").child("weightStart").setValue(initWeight)
+                    database.child("UserWeight").child("weightChange").setValue(_weightChange)
+                    historyModel.weightStart.value = initWeight
+                    historyModel.weightCurrent.value = weightCurrent
+                    historyModel.weightChange.value = _weightChange
+                }
+                else{
+                    historyModel.weightStart.value = weightStart
+                    historyModel.weightCurrent.value = weightCurrent
+                    historyModel.weightChange.value = weightChange
+                }
             }
             .addOnFailureListener{ex-> bind.tvStartWeight.text = ex.message}
-
-
-        weightStart = bind.tvStartWeight.text.toString()
 
         historyModel.totalCalories.observe(viewLifecycleOwner, { newValue ->
             bind.tvTotalCalory.text = newValue
@@ -105,5 +130,10 @@ class StatisticFragment : Fragment() {
         }
 
         return bind.root
+    }
+
+    private fun calWeightChange (newWeight:String, startWeight:String) : String {
+
+        return (newWeight.toInt() - startWeight.toInt()).toString()
     }
 }

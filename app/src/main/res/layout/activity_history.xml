@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:text="View All"
             app:backgroundTint="@color/dashboardRed"
             app:layout_constraintEnd_toEndOf="parent"
@@ -41,14 +42,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <CalendarView
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:background="@color/white" />
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            app:mcv_selectionColor="@color/dashboardRed"
+            app:mcv_showOtherDates="all" />
+
 
     </LinearLayout>
 </ScrollView>

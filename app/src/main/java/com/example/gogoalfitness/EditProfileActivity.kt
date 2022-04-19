@@ -70,6 +70,8 @@ class EditProfileActivity : AppCompatActivity() {
             }
             val birthdate = binding.edtResultBirthdate.text.toString()
             updateData(username, height, weight, gender, birthdate)
+            val intent = Intent(this, NavigationActivity::class.java)
+            startActivity(intent)
         }
     }
 

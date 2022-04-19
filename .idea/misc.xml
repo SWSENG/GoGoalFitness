@@ -111,10 +111,23 @@
         <entry key="..\:/Users/ken/Desktop/GoGoalFitness/app/src/main/res/layout/history_view.xml" value="0.75" />
         <entry key="..\:/Users/ken/Desktop/GoGoalFitness/app/src/main/res/layout/item_exercise_status.xml" value="0.39739583333333334" />
         <entry key="..\:/Users/ken/Desktop/GoGoalFitness/app/src/main/res/menu/menu.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_all_history.xml" value="0.6556016597510373" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_calendar.xml" value="0.43125" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_history.xml" value="0.3648148148148148" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_shoulder.xml" value="0.27037037037037037" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/activity_weight.xml" value="0.27037037037037037" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/calendar_day.xml" value="0.3962962962962963" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/calendar_day_layout.xml" value="0.30520833333333336" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/calendar_day_legend.xml" value="0.4421875" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/calendar_week_layout.xml" value="0.4421875" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/fragment_calendar.xml" value="0.4421875" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/fragment_home.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/fragment_recipe.xml" value="0.3962962962962963" />
+        <entry key="..\:/Users/ken/Desktop/MobileAssignment/app/src/main/res/layout/fragment_statistic.xml" value="0.3962962962962963" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

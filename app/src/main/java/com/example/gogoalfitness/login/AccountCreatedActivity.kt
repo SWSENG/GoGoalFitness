@@ -3,6 +3,7 @@ package com.example.gogoalfitness.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.gogoalfitness.NavigationActivity
 import com.example.gogoalfitness.R
 import com.example.gogoalfitness.databinding.ActivityAccountCreatedBinding
 
@@ -16,8 +17,8 @@ class AccountCreatedActivity : AppCompatActivity() {
 
         binding.btnStart.setOnClickListener(){
             //to home page/home fragment
-            //val intent = Intent(this,Home::class.java)
-            //startActivity(intent)
+            val intent = Intent(this,NavigationActivity::class.java)
+            startActivity(intent)
         }
     }
 }
